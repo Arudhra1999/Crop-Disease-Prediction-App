@@ -142,7 +142,7 @@ if st.button("Process"):
         
         st.subheader("Plotting your input image with boundries for enhanced visualization")
         explainer = lime_image.LimeImageExplainer()
-        explanation = explainer.explain_instance(test_image[0], model.predict, top_labels=5, hide_color=0, num_samples=500)
+        explanation = explainer.explain_instance(test_image[0], model.predict, top_labels=5, hide_color=0, num_samples=100)
         st.write("Processing the image for boundries...")
         
         progress = st.progress(0)
